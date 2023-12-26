@@ -48,12 +48,12 @@ const props = defineProps({
         required: true
     },
     apiKey: {
-        type: String as PropType<String>,
+        type: String as PropType<string>,
         required: true
     }
 });
 
-const API_KEY = "AIzaSyDGCME4x2cF7WHwjLj_YvHggW3HzUGo7gw";
+const API_KEY = props.apiKey;
 const generativeAI = new GoogleGenerativeAI(API_KEY);
 const model = generativeAI.getGenerativeModel({ model: "gemini-pro" });
 
